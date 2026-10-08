@@ -1,0 +1,28 @@
+{
+  "name": "looot-csv-enrich",
+  "version": "0.1.0",
+  "description": "Add company, work email, email check, phone and person columns to any CSV. Quote first, one key, provider fallback, failed calls free. Built on the looot API.",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "node src/cli.ts",
+    "quote": "node src/cli.ts examples/leads.csv --add company,email,verify,phone",
+    "test": "node --test test/*.test.ts",
+    "typecheck": "tsc --noEmit",
+    "scan": "bash scripts/leak-scan.sh ."
+  },
+  "engines": {
+    "node": ">=22.18"
+  },
+  "devDependencies": {
+    "@types/node": "22.20.4",
+    "typescript": "5.9.3"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/loootai/looot-csv-enrich.git"
+  },
+  "homepage": "https://github.com/loootai/looot-csv-enrich",
+  "keywords": ["looot", "csv", "enrichment", "email finder", "email verification", "clay alternative", "lead enrichment"]
+}

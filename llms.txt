@@ -1,0 +1,17 @@
+# looot-csv-enrich
+
+> Add company, work email, email check, phone and job title columns to any CSV. Prints a quote first; spends only with --run, inside a budget. Built on the looot API.
+
+looot is one key and one prepaid balance for 2,500+ data API endpoints from 90+ providers. Each cell is one job run with fallback across providers; a failed call costs $0.
+
+## Use
+
+- git clone https://github.com/loootai/looot-csv-enrich && cd looot-csv-enrich
+- node src/cli.ts leads.csv --add company,email,verify            (quote, free, no token)
+- LOOOT_TOKEN=... node src/cli.ts leads.csv --add company,email,verify --budget 2 --run
+
+## Links
+
+- Docs: https://docs.looot.ai
+- Remote MCP server: claude mcp add --transport http looot https://api.looot.ai/mcp
+- GTM tools list: https://github.com/loootai/awesome-gtm

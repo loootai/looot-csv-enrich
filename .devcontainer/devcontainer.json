@@ -1,0 +1,7 @@
+{
+  "name": "looot-csv-enrich",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:1-22",
+  "containerEnv": {
+    "LOOOT_TOKEN": "${localEnv:LOOOT_TOKEN}"
+  }
+}
