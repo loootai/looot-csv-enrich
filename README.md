@@ -47,6 +47,22 @@ node src/cli.ts my-leads.csv --add company,email,verify --budget 2 --run
 
 It writes `my-leads.enriched.csv` after every row, so a stopped run keeps what it found. Run the same command again and it picks up from that file: filled cells are skipped, and any call it repeats uses the same idempotency key, so looot returns the first answer and does not charge again.
 
+## Docker
+
+The same CLI as an image, for machines without Node 22. The folder you mount at `/data` is the working directory, so file names are relative to it.
+
+```bash
+# quote, no token
+docker run --rm -v "$PWD:/data" loootai/looot-csv-enrich leads.csv --add company,email,verify
+
+# paid run: the token is passed from your shell, never baked into the image
+docker run --rm -e LOOOT_TOKEN -v "$PWD:/data" loootai/looot-csv-enrich leads.csv --add company,email,verify --budget 2 --run
+```
+
+The image is `node:22-alpine` pinned by digest, runs as the unprivileged `node` user (uid 1000) and has no dependencies beyond Node. On Linux, if your folder belongs to another uid, add `--user "$(id -u):$(id -g)"`. To build it yourself: `docker build -t looot-csv-enrich .`
+
+Publishing: `.github/workflows/docker-publish.yml` builds linux/amd64 and linux/arm64 and pushes to Docker Hub when a `v*` tag is pushed. It needs the repository secrets `DOCKERHUB_USERNAME` and `DOCKERHUB_TOKEN`. The image name above assumes the Docker Hub namespace `loootai`. Overview text for the Docker Hub page is in [docs/DOCKERHUB.md](docs/DOCKERHUB.md).
+
 ## Columns you can add
 
 | `--add` | looot job | Needs in the row | Adds |

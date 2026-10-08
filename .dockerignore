@@ -1,0 +1,6 @@
+# Only package.json, LICENSE, src/ and examples/ go into the image.
+*
+!package.json
+!LICENSE
+!src
+!examples
