@@ -2,7 +2,7 @@
 
 > Add company, work email, email check, phone and job title columns to any CSV. Prints a quote first; spends only with --run, inside a budget. Built on the looot API.
 
-looot is one key and one prepaid balance for 2,500+ data API endpoints from 90+ providers. Each cell is one job run with fallback across providers; a failed call costs $0.
+looot is one key and one prepaid balance for 4,200+ data API endpoints from 300+ providers. Each cell is one job run with fallback across providers; a failed call costs $0.
 
 ## Use
 

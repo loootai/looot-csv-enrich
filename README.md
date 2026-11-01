@@ -6,7 +6,7 @@
 
 Give it the CSV you already have. It adds the columns you ask for: company details, work email, email check, phone, job title. Before it spends anything it prints a quote for the whole file. It runs only when you add `--run`, and it never goes over your budget.
 
-It runs on [looot](https://looot.ai): one token and one prepaid balance for 2,500+ data API endpoints from 90+ providers. Each cell is one looot job run. If the first provider misses or fails, looot tries the next one for the same job, and you pay only for attempts that ran. A failed call costs $0.
+It runs on [looot](https://looot.ai): one token and one prepaid balance for 4,200+ data API endpoints from 300+ providers. Each cell is one looot job run. If the first provider misses or fails, looot tries the next one for the same job, and you pay only for attempts that ran. A failed call costs $0.
 
 No runtime dependencies. Plain `fetch`, Node 22.18 or newer (it runs the `.ts` files directly).
 

@@ -12,7 +12,7 @@ General tab) to `https://github.com/loootai/looot-csv-enrich`.
 
 Give it the CSV you already have. It adds the columns you ask for: company details, work email, email check, phone, job title. It prints a quote for the whole file before it spends anything, runs only with `--run`, and stops at your budget.
 
-It runs on [looot](https://looot.ai): one token and one prepaid balance for 2,500+ data API endpoints from 90+ providers. Each cell is one looot job run. If the first provider misses, looot tries the next one, and a failed call costs $0.
+It runs on [looot](https://looot.ai): one token and one prepaid balance for 4,200+ data API endpoints from 300+ providers. Each cell is one looot job run. If the first provider misses, looot tries the next one, and a failed call costs $0.
 
 ## Quote, no token needed
 
